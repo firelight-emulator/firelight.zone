@@ -3,5 +3,6 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "selemondev.vscode-shadcn-svelte",
+    "bradlc.vscode-tailwindcss",
   ]
 }
