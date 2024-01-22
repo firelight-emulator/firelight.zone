@@ -18,6 +18,9 @@
     <Breadcrumb up={1}>
       {data.game?.title}
     </Breadcrumb>
+    <Breadcrumb up={0}>
+      {hack.title}
+    </Breadcrumb>
   </Breadcrumbs>
 
   <header class="py-8 bg-cover bg-center" style="background-image: url({hack.heroBackground})">

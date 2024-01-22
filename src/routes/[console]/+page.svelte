@@ -1,41 +1,41 @@
 <script lang="ts">
   import Layout from "$lib/components/layout.svelte";
 	import { Breadcrumbs, Breadcrumb } from "$lib/components/breadcrumbs";
-  import Hack from "$lib/components/card/hack.svelte";
   import { page } from "$app/stores";
+	import * as Card from "$lib/components/ui/card";
 
   export let data;
 
-  const game = data.game!;
-  const hacks = data.hacks!;
+  const console = data.console!;
+  const games = data.games!;
 </script>
 
 <Layout>
   <Breadcrumbs slot="breadcrumbs">
-    <Breadcrumb up={1}>
-      {data.console?.title}
-    </Breadcrumb>
     <Breadcrumb up={0}>
-      {data.game?.title}
+      {data.console?.title}
     </Breadcrumb>
   </Breadcrumbs>
 
   <div class="max-w-screen-xl p-6 mx-auto">
     <main class="grow">
       <h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">
-        {game.title} romhacks
+        {console.title} games
       </h1>
 
       <ol class="grid md:grid-cols-2 xl:grid-cols-3 gap-2">
-        <li>
-          {#each hacks as hack}
-            <a href={$page.url.toString() + "/" + hack.slug} class="w-full">
-              <Hack {hack} />
+        {#each games as game}
+          <li>
+            <a href={$page.url.toString() + "/" + game.slug} class="w-full">
+              <Card.Root>
+                <Card.Header>
+                  <Card.Title>{game.title}</Card.Title>
+                </Card.Header>
+              </Card.Root>
             </a>
-          {/each}
-        </li>
+          </li>
+        {/each}
       </ol>
     </main>
   </div>
 </Layout>
-
