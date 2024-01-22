@@ -13,6 +13,5 @@
   <slot name="breadcrumbs" slot="breadcrumbs" />
 </Nav>
 
-<main>
-  <slot />
-</main>
+<slot />
+

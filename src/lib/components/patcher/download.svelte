@@ -7,7 +7,7 @@
   // TODO
 </script>
 
-<Button>
+<Button size="lg">
   <Download class="mr-2" />
   Download
 </Button>
