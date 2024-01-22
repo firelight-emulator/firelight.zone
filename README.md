@@ -4,5 +4,11 @@
 
 ```bash
 pnpm install
-pnpm run dev
+pnpm dev
+```
+
+### Nix
+
+```bash
+nix-shell --command 'pnpm dev'
 ```
