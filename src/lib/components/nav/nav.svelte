@@ -3,7 +3,7 @@
   import UserMenu from "./user-menu.svelte";
 </script>
 
-<nav class="p-3 flex items-center select-none">
+<nav class="p-3 flex items-center select-none sticky top-0 bg-slate-200">
   <NavItem href="/">
     Firelight
   </NavItem>
@@ -16,3 +16,12 @@
     <UserMenu />
   </div>
 </nav>
+
+<style>
+  @supports (backdrop-filter: blur(16px)) {
+    nav {
+      backdrop-filter: blur(16px);
+      --tw-bg-opacity: 0.7;
+    }
+  }
+</style>

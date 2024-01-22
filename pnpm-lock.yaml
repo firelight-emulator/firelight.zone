@@ -17,6 +17,9 @@ dependencies:
   svelte-markdown:
     specifier: ^0.4.1
     version: 0.4.1(svelte@4.2.9)
+  svelte-youtube-lite:
+    specifier: ^0.5.1
+    version: 0.5.1(svelte@4.2.9)
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -2637,6 +2640,14 @@ packages:
       svelte: 4.2.9
       typescript: 5.3.3
     dev: true
+
+  /svelte-youtube-lite@0.5.1(svelte@4.2.9):
+    resolution: {integrity: sha512-/GSp7M/esnxXx0ViaxDoZjccvm3xwe+Q+v7o3RaK6k6jX/mj8YwOCZKywJumgSDSXabY7prOjiEoPs1DeLpa4Q==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      svelte: 4.2.9
+    dev: false
 
   /svelte@4.2.9:
     resolution: {integrity: sha512-hsoB/WZGEPFXeRRLPhPrbRz67PhP6sqYgvwcAs+gWdSQSvNDw+/lTeUJSWe5h2xC97Fz/8QxAOqItwBzNJPU8w==}
