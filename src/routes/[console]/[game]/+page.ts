@@ -6,13 +6,13 @@ export function load({ params }) {
   });
   if (!game) return { status: 404 };
 
-  const hack = Object.entries(hacks).find(([, value]) => {
-    return value.game == game[0] && value.slug == params.hack;
-  });
-  if (!hack) return { status: 404 };
+  const gameHacks = Object.entries(hacks).filter(([, value]) => { return value.game == game[0]; });
 
   return {
-    hackId: hack[0],
-    hack: hack[1],
+    gameId: game[0],
+    game: game[1],
+    hacks: gameHacks.map(([id, hack]) => {
+      return { id, ...hack };
+    })
   };
 }

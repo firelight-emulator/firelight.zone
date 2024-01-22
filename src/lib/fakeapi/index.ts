@@ -27,6 +27,7 @@ export const hacks = {
     trailerYouTubeId: "HFngd-Uq6p0",
     heroLogo: "https://camo.githubusercontent.com/410ab6ce6f0f5196280c1b91a18413760b60ef546034fe6a2901b9db571f4375/68747470733a2f2f692e696d6775722e636f6d2f7a43646c4171782e706e67",
     heroBackground: "https://camo.githubusercontent.com/515292d0351cbb1c2ac82f5bad5274443a043bc3cf30733203b3120aa1c67c6d/68747470733a2f2f692e696d6775722e636f6d2f4a437a6b4b506f2e706e67",
+    shortDescription: "Adds TTYD's gameplay, items, badges, and recipes into PM64, plus a bunch of new areas!",
     markdownDescription: `
 **What's TTYD64?**
 TTYD64 is a PM64 romhack that adds TTYD's gameplay, items, badges, and recipes into PM64, plus a bunch of new areas into the game.
