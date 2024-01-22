@@ -9,9 +9,10 @@
   import { Nav } from "$lib/components/nav";
 </script>
 
-<Nav>
-  <slot name="breadcrumbs" slot="breadcrumbs" />
-</Nav>
-
-<slot />
-
+<div class="text-stone-700 bg-stone-100 dark:text-stone-300 dark:bg-stone-900">
+  <Nav>
+    <slot name="breadcrumbs" slot="breadcrumbs" />
+  </Nav>
+  
+  <slot />  
+</div>

@@ -19,7 +19,7 @@
   let url = getParentUrl($page.url, up);
 </script>
 
-<a href={url.toString()} class="p-1 px-2 flex itmes-center rounded hover:bg-stone-100">
+<a href={url.toString()} class="p-1 px-2 flex itmes-center rounded hover:bg-stone-100 dark:hover:bg-stone-900">
   <slot />
 </a>
 

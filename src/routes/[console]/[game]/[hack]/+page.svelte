@@ -73,7 +73,7 @@ No
 
   <div class="flex flex-col lg:flex-row gap-4 max-w-screen-lg p-6 mx-auto">
     <main class="grow">
-      <h1 class="py-3 text-4xl font-bold text-stone-900">{hack.title}</h1>
+      <h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">{hack.title}</h1>
 
       <Markdown source={hack.markdownDescription} />
     </main>

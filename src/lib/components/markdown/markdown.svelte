@@ -7,7 +7,7 @@
   export let source: string;
 </script>
 
-<div class="prose prose-stone">
+<div class="prose prose-stone dark:prose-invert">
   <SvelteMarkdown
     source={source}
     options={{ breaks: true, smartypants: true }}
