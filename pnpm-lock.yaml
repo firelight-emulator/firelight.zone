@@ -43,6 +43,9 @@ devDependencies:
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.1)
+  '@types/dom-view-transitions':
+    specifier: ^1.0.4
+    version: 1.0.4
   '@types/eslint':
     specifier: 8.56.0
     version: 8.56.0
@@ -82,6 +85,9 @@ devDependencies:
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
+  tailwindcss-view-transitions:
+    specifier: ^0.1.1
+    version: 0.1.1(tailwindcss@3.4.1)
   tslib:
     specifier: ^2.4.1
     version: 2.4.1
@@ -701,6 +707,10 @@ packages:
 
   /@types/cookie@0.6.0:
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
+    dev: true
+
+  /@types/dom-view-transitions@1.0.4:
+    resolution: {integrity: sha512-oDuagM6G+xPLrLU4KeCKlr1oalMF5mJqV5pDPMDVIEaa8AkUW00i6u+5P02XCjdEEUQJC9dpnxqSLsZeAciSLQ==}
     dev: true
 
   /@types/eslint@8.56.0:
@@ -2691,6 +2701,14 @@ packages:
       tailwind-merge: 1.14.0
       tailwindcss: 3.4.1
     dev: false
+
+  /tailwindcss-view-transitions@0.1.1(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-YIiZAoYDSwcUC6kt/TD7knkOkiDyyQArUN3fgYAvrRIF7zzta7/olQM44z9zeuGRBMSWpkbP1slYH67gEMMIKA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0'
+    dependencies:
+      tailwindcss: 3.4.1
+    dev: true
 
   /tailwindcss@3.4.1:
     resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}

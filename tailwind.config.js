@@ -1,12 +1,13 @@
 import { fontFamily } from "tailwindcss/defaultTheme";
 import typography from "@tailwindcss/typography";
+import viewTransitions from "tailwindcss-view-transitions";
 
 /** @type {import('tailwindcss').Config} */
 const config = {
 	darkMode: ["class"],
 	content: ["./src/**/*.{html,js,svelte,ts}"],
   safelist: ["dark"],
-	plugins: [typography],
+	plugins: [typography, viewTransitions],
 	theme: {
 		container: {
 			center: true,

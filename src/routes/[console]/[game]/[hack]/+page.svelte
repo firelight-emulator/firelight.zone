@@ -23,8 +23,17 @@
     </Breadcrumb>
   </Breadcrumbs>
 
-  <header class="py-8 bg-cover bg-center" style="background-image: url({hack.heroBackground})">
-    <img src={hack.heroLogo} alt={hack.title} class="w-96 mx-auto my-16" />
+  <header
+    class="py-8 bg-cover bg-center"
+    style:background-image="url({hack.heroBackground})"
+    style:view-transition-name="hack-background"
+  >
+    <img
+      src={hack.heroLogo}
+      alt={hack.title}
+      class="w-96 mx-auto my-16"
+      style:view-transition-name="hack-logo"
+    />
   </header>
 
   <div class="flex flex-col lg:flex-row gap-4 max-w-screen-lg p-6 mx-auto">

@@ -34,6 +34,8 @@
     --ring: 20 14.3% 4.1%;
  
     --radius: 0.5rem;
+    
+    scrollbar-gutter: stable;
   }
  
   .dark {
@@ -78,4 +80,29 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::view-transition-old(hack-background),
+::view-transition-new(hack-background) {
+  animation: none;
+  /* Use normal blending,
+  so the new view sits on top and obscures the old view */
+  mix-blend-mode: normal;
+  /* Make the height the same as the group,
+  meaning the view size might not match its aspect-ratio. */
+  height: 100%;
+  /* Clip any overflow of the view */
+  overflow: clip;
+}
+
+::view-transition-old(hack-background) {
+  /* Maintain the aspect ratio of the view,
+  by shrinking it to fit within the bounds of the element */
+  object-fit: cover;
+}
+
+::view-transition-new(hack-background) {
+  /* Maintain the aspect ratio of the view,
+  by growing it to cover the bounds of the element */
+  object-fit: cover;
 }
