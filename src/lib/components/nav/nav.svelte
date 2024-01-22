@@ -8,6 +8,8 @@
     Firelight
   </NavItem>
 
+  <slot name="breadcrumbs" />
+
   <div class="flex-1" />
 
   <div class="flex items-center">
