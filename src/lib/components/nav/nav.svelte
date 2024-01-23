@@ -3,7 +3,7 @@
   import UserMenu from "./user-menu.svelte";
 </script>
 
-<nav class="p-3 flex items-center select-none sticky top-0 bg-stone-200 dark:bg-stone-800">
+<nav class="p-3 flex items-center select-none sticky w-full top-0 bg-stone-200 dark:bg-stone-800">
   <NavItem href="/">
     Firelight
   </NavItem>
