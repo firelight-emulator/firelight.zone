@@ -6,39 +6,39 @@
 	import YoutubeVideo from "$lib/components/youtube-video.svelte";
 
   export let data;
-
-  const hack = data.hack!;
 </script>
 
 <Layout>
   <Breadcrumbs slot="breadcrumbs">
     <Breadcrumb up={2}>
-      {data.console?.title}
+      {data.platform?.name}
     </Breadcrumb>
     <Breadcrumb up={1}>
-      {data.game?.title}
+      {data.game?.game_name}
     </Breadcrumb>
     <Breadcrumb up={0}>
-      {hack.title}
+      {data.hack.name}
     </Breadcrumb>
   </Breadcrumbs>
 
-  <header class="py-8 bg-cover bg-center" style="background-image: url({hack.heroBackground})">
-    <img src={hack.heroLogo} alt={hack.title} class="w-96 mx-auto my-16" />
+  <header class="py-8 bg-cover bg-center" style="background-image: url({data.hack.bannerImage})">
+    <img src={data.hack.logoImage} alt={data.hack.name} class="w-96 mx-auto my-16" />
   </header>
 
   <div class="flex flex-col lg:flex-row gap-4 max-w-screen-lg p-6 mx-auto">
     <main class="grow">
-      <h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">{hack.title}</h1>
+      <h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">{data.hack.name}</h1>
 
-      <Markdown source={hack.markdownDescription} />
+      <Markdown source={data.hack.markdownDescription} />
     </main>
     <aside class="w-96 overflow-hidden">
+      <!--
       <div class="py-4">
-        <Download url={hack.downloadUrl} />
+        <Download url={data.hack.downloadUrl} />
       </div>
 
-      <YoutubeVideo id={hack.trailerYouTubeId} />
+      <YoutubeVideo id={data.hack.trailerYouTubeId} />
+      -->
     </aside>
   </div>
 </Layout>
