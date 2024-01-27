@@ -1,8 +1,12 @@
 <script lang="ts">
-  import { FirebaseApp } from 'sveltefire';
-  import { auth, firestore } from '$lib/firebase';
+	import type { Session, SupabaseClient } from '@supabase/supabase-js';
+	import { setContext } from 'svelte';
+
+	export let supabase: SupabaseClient;
+	export let session: Session | null;
+
+	setContext('supabase', supabase);
+	setContext('session', session);
 </script>
 
-<FirebaseApp {auth} {firestore}>
-  <slot />
-</FirebaseApp>
+<slot />
