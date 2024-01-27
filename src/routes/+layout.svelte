@@ -2,11 +2,13 @@
 	import type { Session, SupabaseClient } from '@supabase/supabase-js';
 	import { setContext } from 'svelte';
 
-	export let supabase: SupabaseClient;
-	export let session: Session | null;
+	export let data: {
+		supabase: SupabaseClient;
+		session: Session | null;
+	};
 
-	setContext('supabase', supabase);
-	setContext('session', session);
+	setContext('supabase', data.supabase);
+	setContext('session', data.session);
 </script>
 
 <slot />

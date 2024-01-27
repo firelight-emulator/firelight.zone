@@ -1,17 +1,18 @@
-# firelight.io
+# Firelight website
 
 ## Development
 
-### Create firebase config
-
-- Create a firebase project
-- Create a web app
-- Copy the config to `src/lib/firebaseConfig.json`
-
-### Start dev server
+### Setup
 
 ```bash
 pnpm install
+pnpm run supabase login
+pnpm run gen-supabase-types
+```
+
+### Development server
+
+```bash
 pnpm dev
 ```
 

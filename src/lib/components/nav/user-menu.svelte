@@ -2,10 +2,20 @@
 	import * as Avatar from '$lib/components/ui/avatar';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
 	import NavItem from './nav-item.svelte';
-	import { isSignedIn } from '$lib/session';
+	import { getSession } from '$lib/session';
+	import { getSupabaseClient } from '$lib/supabase';
+
+	const supabase = getSupabaseClient();
+	const session = getSession();
+
+	async function signOut() {
+		await supabase.auth.signOut();
+		// Reload page because session is not reactive
+		window.location.reload();
+	}
 </script>
 
-{#if isSignedIn}
+{#if session}
 	<DropdownMenu.Root>
 		<DropdownMenu.Trigger>
 			<Avatar.Root>
@@ -14,7 +24,7 @@
 		</DropdownMenu.Trigger>
 		<DropdownMenu.Content>
 			<DropdownMenu.Group>
-				<DropdownMenu.Label>{user.email}</DropdownMenu.Label>
+				<DropdownMenu.Label>{session.user.email}</DropdownMenu.Label>
 				<DropdownMenu.Separator />
 				<DropdownMenu.Item>Profile</DropdownMenu.Item>
 				<DropdownMenu.Separator />
