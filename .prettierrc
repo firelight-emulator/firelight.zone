@@ -16,11 +16,7 @@
 			}
 		}
 	],
-	"importOrder": [
-		"^$app/(.*)$",
-		"^$lib/(.*)$",
-		"^[./]"
-	],
+	"importOrder": ["^$app/(.*)$", "^$lib/(.*)$", "^[./]"],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true
 }

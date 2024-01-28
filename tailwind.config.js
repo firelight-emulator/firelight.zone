@@ -50,6 +50,7 @@ const config = {
 					DEFAULT: 'hsl(var(--card) / <alpha-value>)',
 					foreground: 'hsl(var(--card-foreground) / <alpha-value>)',
 				},
+				blurple: '#5865F2',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

@@ -42,3 +42,9 @@ pnpm dev
 ```
 
 Then open the provided URL in your browser.
+
+### Authentication in local environment
+
+To log in, you must use magic link authentication. The OAuth providers won't work.
+
+Emails are sent to an Inbucket service at http://localhost:54324/.

@@ -11,10 +11,7 @@
 	export let centered = false;
 </script>
 
-<div
-	class="min-h-dvh bg-stone-100 text-stone-700 dark:bg-stone-900 dark:text-stone-300"
-	class:centered
->
+<div class="min-h-dvh bg-background text-foreground" class:centered>
 	<Nav>
 		<slot name="breadcrumbs" slot="breadcrumbs" />
 	</Nav>
