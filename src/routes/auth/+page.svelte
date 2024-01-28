@@ -3,11 +3,12 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as AlertDialog from '$lib/components/ui/alert-dialog';
 	import { getSupabaseClient } from '$lib/supabase';
+	import { page } from '$app/stores';
 	import type { AuthError } from '@supabase/supabase-js';
 
 	const supabase = getSupabaseClient();
 
-	export let redirectTo = '/';
+	const redirectTo = $page.url.searchParams.get('redirect') || '/';
 
 	let error: AuthError | null = null;
 
