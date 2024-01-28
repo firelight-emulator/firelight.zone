@@ -22,16 +22,10 @@ If you're using Nix, just run `nix-shell`. Otherwise, install and set up a local
 ```bash
 pnpm install
 pnpm supabase start
+pnpm supabase status -o env > .env
+sed -i 's/ANON_KEY/PUBLIC_ANON_KEY/' .env
+sed -i 's/API_URL/PUBLIC_API_URL/' .env
 ```
-
-Create a `.env` file with the API URL and anon key provided by Supabase (you can run `pnpm supabase status` to see them again):
-
-```ini
-PUBLIC_SUPABASE_URL=http://127.0.0.1:54321
-PUBLIC_SUPABASE_ANON_KEY=abdefghijklmnopqrstuvwxyz
-```
-
-(TODO: do this automatically with `pnpm supabase status -o env`)
 
 ### Development server
 
