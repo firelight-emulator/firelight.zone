@@ -8,5 +8,7 @@ pkgs.mkShell {
 
   shellHook = ''
     pnpm install
+    pnpm supabase start
+    trap 'pnpm supabase stop' EXIT
   '';
 }

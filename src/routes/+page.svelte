@@ -1,17 +1,12 @@
 <script lang="ts">
-  import Layout from "$lib/components/layout.svelte";
-  import { Button } from "$lib/components/ui/button";
+	import Layout from '$lib/components/layout.svelte';
+
+	export let data;
 </script>
 
 <Layout>
-  <h1>Welcome to SvelteKit</h1>
-  <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-  <h1 class="text-3xl font-bold underline bg-red">
-    Hello world!
-
-    <Button variant="outline" on:click={() => alert("Hello world!")}>
-      Click me
-    </Button>
-  </h1>
+	<h1>Hello</h1>
+	<p>
+		There are {data.platforms.length} platforms.
+	</p>
 </Layout>

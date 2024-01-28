@@ -14,7 +14,7 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"gen-supabase-types": "supabase gen types typescript --project-id zcvsxbcmfcloropngwrb > src/lib/supabase/database.ts"
+		"generate-types": "supabase gen types typescript --local > src/lib/supabase/database.ts"
 	},
 	"dependencies": {
 		"@supabase/auth-helpers-sveltekit": "^0.11.0",
