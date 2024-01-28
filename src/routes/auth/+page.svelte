@@ -42,7 +42,7 @@
 			<h1 class="text-2xl font-semibold tracking-tight">Sign in to Firelight</h1>
 		</div>
 
-		<MagicLinkForm form={data.form} {redirect} />
+		<MagicLinkForm form={data.form} {redirect} on:error={(evt) => (error = evt.detail)} />
 
 		<div class="relative">
 			<div class="absolute inset-0 flex items-center">
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 
-		<Button on:click={signInWithDiscord} class="bg-blurple hover:bg-blurple text-white">
+		<Button on:click={signInWithDiscord} class="bg-blurple text-white hover:bg-blurple">
 			<DiscordLogo class="mr-2 h-5 w-5" />
 			Discord
 		</Button>

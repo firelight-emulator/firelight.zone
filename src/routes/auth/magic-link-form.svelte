@@ -4,6 +4,8 @@
 	import { formSchema, type FormSchema } from './schema';
 	import { getSupabaseClient } from '$lib/supabase';
 	import type { SuperValidated } from 'sveltekit-superforms';
+	import type { AuthError } from '@supabase/supabase-js';
+	import { createEventDispatcher } from 'svelte';
 
 	export let form: SuperValidated<FormSchema>;
 	export let redirect: URL;
@@ -11,6 +13,8 @@
 	const supabase = getSupabaseClient();
 
 	let email: string | null = null;
+
+	const dispatch = createEventDispatcher<{ error: AuthError }>();
 </script>
 
 <Form.Root
@@ -22,14 +26,17 @@
 		async onSubmit({ formData, cancel }) {
 			cancel(); // Don't submit the form to the server
 			email = formData.get('email')?.toString() ?? null;
+			if (!email) return;
 			const resp = await supabase.auth.signInWithOtp({
-				// @ts-ignore
 				email,
 				options: {
 					emailRedirectTo: redirect.href,
 				},
 			});
-			console.log(resp);
+			if (resp.error) {
+				email = null;
+				dispatch('error', resp.error);
+			}
 		},
 	}}
 >
