@@ -4,20 +4,24 @@
 	import * as AlertDialog from '$lib/components/ui/alert-dialog';
 	import { page } from '$app/stores';
 	import { getSupabaseClient } from '$lib/supabase';
-
+	import { isSignedIn } from '$lib/session';
 	import type { AuthError } from '@supabase/supabase-js';
 
 	const supabase = getSupabaseClient();
 
-	const redirectTo = $page.url.searchParams.get('redirect') || '/';
+	const redirect = new URL($page.url.searchParams.get('redirect') || '/', $page.url);
 
 	let error: AuthError | null = null;
+
+	if (isSignedIn()) {
+		window.location.replace(redirect);
+	}
 
 	async function signInWithDiscord() {
 		const resp = await supabase.auth.signInWithOAuth({
 			provider: 'discord',
 			options: {
-				redirectTo,
+				redirectTo: redirect.href,
 			},
 		});
 		if (resp.error) {
