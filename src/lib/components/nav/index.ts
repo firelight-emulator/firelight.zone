@@ -1,3 +1,3 @@
-import Nav from "./nav.svelte";
+import Nav from './nav.svelte';
 
 export { Nav };

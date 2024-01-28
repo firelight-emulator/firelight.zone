@@ -4,7 +4,9 @@
 	"trailingComma": "all",
 	"printWidth": 100,
 	"plugins": [
-		"prettier-plugin-svelte"
+		"prettier-plugin-svelte",
+		"@trivago/prettier-plugin-sort-imports",
+		"prettier-plugin-tailwindcss"
 	],
 	"overrides": [
 		{
@@ -13,5 +15,12 @@
 				"parser": "svelte"
 			}
 		}
-	]
+	],
+	"importOrder": [
+		"^$app/(.*)$",
+		"^$lib/(.*)$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
 }

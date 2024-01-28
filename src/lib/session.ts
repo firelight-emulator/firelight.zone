@@ -1,4 +1,5 @@
 import type { Session } from '@supabase/supabase-js';
+
 import { getContext } from 'svelte';
 
 export function getSession() {

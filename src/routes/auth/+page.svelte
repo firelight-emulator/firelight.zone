@@ -2,8 +2,9 @@
 	import Layout from '$lib/components/layout.svelte';
 	import { Button } from '$lib/components/ui/button';
 	import * as AlertDialog from '$lib/components/ui/alert-dialog';
-	import { getSupabaseClient } from '$lib/supabase';
 	import { page } from '$app/stores';
+	import { getSupabaseClient } from '$lib/supabase';
+
 	import type { AuthError } from '@supabase/supabase-js';
 
 	const supabase = getSupabaseClient();
