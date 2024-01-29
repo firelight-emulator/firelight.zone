@@ -7,6 +7,6 @@
 	export { className as class };
 </script>
 
-<div class={cn('flex flex-col gap-2 py-0.5', className)} {...$$restProps}>
+<div class={cn('flex flex-col gap-1 py-2', className)} {...$$restProps}>
 	<slot />
 </div>
