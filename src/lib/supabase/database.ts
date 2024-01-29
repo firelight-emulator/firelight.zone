@@ -171,6 +171,41 @@ export interface Database {
         }
         Relationships: []
       }
+      hacks: {
+        Row: {
+          created_at: string
+          description: string
+          game_id: number
+          id: number
+          name: string
+          short_description: string
+        }
+        Insert: {
+          created_at?: string
+          description: string
+          game_id: number
+          id?: number
+          name: string
+          short_description: string
+        }
+        Update: {
+          created_at?: string
+          description?: string
+          game_id?: number
+          id?: number
+          name?: string
+          short_description?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "hacks_game_id_fkey"
+            columns: ["game_id"]
+            isOneToOne: false
+            referencedRelation: "games"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       platforms: {
         Row: {
           created_at: string

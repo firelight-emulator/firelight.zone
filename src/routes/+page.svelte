@@ -6,7 +6,11 @@
 
 <Layout>
 	<h1>Hello</h1>
-	<p>
-		There are {data.platforms.length} platforms.
-	</p>
+	<ul>
+		{#each data.platforms as platform}
+			<li>
+				<a href={platform.slug}>{platform.name}</a>
+			</li>
+		{/each}
+	</ul>
 </Layout>
