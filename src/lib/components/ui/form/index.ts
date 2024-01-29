@@ -6,6 +6,7 @@ import type { Writable } from 'svelte/store';
 import Button from './form-button.svelte';
 import Checkbox from './form-checkbox.svelte';
 import Description from './form-description.svelte';
+import Game from './form-game.svelte';
 import Input from './form-input.svelte';
 import Item from './form-item.svelte';
 import Label from './form-label.svelte';
@@ -56,6 +57,7 @@ export {
 	SelectTrigger,
 	NativeSelect,
 	NativeRadio,
+	Game,
 	//
 	Root as Form,
 	Field as FormField,
@@ -80,4 +82,5 @@ export {
 	SelectSeparator as FormSelectSeparator,
 	SelectTrigger as FormSelectTrigger,
 	Button as FormButton,
+	Game as FormGame,
 };

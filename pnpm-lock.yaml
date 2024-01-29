@@ -17,6 +17,9 @@ dependencies:
   clsx:
     specifier: ^2.1.0
     version: 2.1.0
+  cmdk-sv:
+    specifier: ^0.0.13
+    version: 0.0.13(svelte@4.2.9)
   formsnap:
     specifier: ^0.4.3
     version: 0.4.3(svelte@4.2.9)(sveltekit-superforms@1.13.4)(zod@3.22.4)
@@ -26,6 +29,9 @@ dependencies:
   svelte-markdown:
     specifier: ^0.4.1
     version: 0.4.1(svelte@4.2.9)
+  svelte-reactive-debounce:
+    specifier: ^0.0.2
+    version: 0.0.2
   svelte-youtube-lite:
     specifier: ^0.5.1
     version: 0.5.1(svelte@4.2.9)
@@ -575,6 +581,20 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
+
+  /@melt-ui/svelte@0.61.2(svelte@4.2.9):
+    resolution: {integrity: sha512-BHkD9G31zQBToA4euDRBgTQRvWxT9scufOVCXgDO6HKTvyxFspbWT2bgiSFqAK4BbAGDn9Ao36Q8F9O71KN4OQ==}
+    peerDependencies:
+      svelte: '>=3 <5'
+    dependencies:
+      '@floating-ui/core': 1.6.0
+      '@floating-ui/dom': 1.6.0
+      '@internationalized/date': 3.5.1
+      dequal: 2.0.3
+      focus-trap: 7.5.4
+      nanoid: 4.0.2
+      svelte: 4.2.9
+    dev: false
 
   /@melt-ui/svelte@0.68.0(svelte@4.2.9):
     resolution: {integrity: sha512-/QvA98hnYEodZtHJ71+ocum/WWp30hVNt3F8uiZKnNYwZDaiQYjlyR9AaGKYcZLCe6R68op1mfCzc0kTzJilyA==}
@@ -1270,6 +1290,16 @@ packages:
       svelte: 4.2.9
     dev: false
 
+  /bits-ui@0.9.9(svelte@4.2.9):
+    resolution: {integrity: sha512-LkdkyTtpXdkjBzPZJVJgpcre4fut6DONoprMfadHFo82HNUhph+02CxDjYEcZcThb5z4YjSxMlCYvQPZm+YtfQ==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      '@melt-ui/svelte': 0.61.2(svelte@4.2.9)
+      nanoid: 5.0.4
+      svelte: 4.2.9
+    dev: false
+
   /brace-expansion@1.1.11:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
@@ -1385,6 +1415,16 @@ packages:
     resolution: {integrity: sha512-+FFYbB0YLaAkhkcrjkyNLYDiOsFSfRjwjY19LXk/psmMx1z00xlCv7hhQoTGXXIKi+YXHL/iiFo8NqMVQX9nOw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dev: true
+
+  /cmdk-sv@0.0.13(svelte@4.2.9):
+    resolution: {integrity: sha512-WrYn0MMdVyzJx+KuOQy028/7mv+uMwO1cxVBM0uJ4KA+50PX792epsj8Yw3It8WfWR8Rae7siBCg54mIAlKsiw==}
+    peerDependencies:
+      svelte: ^4.0.0
+    dependencies:
+      bits-ui: 0.9.9(svelte@4.2.9)
+      nanoid: 5.0.4
+      svelte: 4.2.9
+    dev: false
 
   /code-red@1.0.4:
     resolution: {integrity: sha512-7qJWqItLA8/VPVlKJlFXU+NBlo/qyfs39aJcuMT/2ere32ZqvF5OSxgdM5xOfJJ7O429gg2HM47y8v9P+9wrNw==}
@@ -2332,6 +2372,12 @@ packages:
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
     hasBin: true
 
+  /nanoid@4.0.2:
+    resolution: {integrity: sha512-7ZtY5KTCNheRGfEFxnedV5zFiORN1+Y1N6zvPTnHQd8ENUvfaDBeuJDZb2bN/oXwXxu3qkTXDzy57W5vAmDTBw==}
+    engines: {node: ^14 || ^16 || >=18}
+    hasBin: true
+    dev: false
+
   /nanoid@5.0.4:
     resolution: {integrity: sha512-vAjmBf13gsmhXSgBrtIclinISzFFy22WwCYoyilZlsrRXNIHSwgFQ1bEdjRwMT3aoadeIF6HMuDRlOxzfXV8ig==}
     engines: {node: ^18 || >=20}
@@ -3103,6 +3149,10 @@ packages:
       svelte: 4.2.9
       typescript: 5.3.3
     dev: true
+
+  /svelte-reactive-debounce@0.0.2:
+    resolution: {integrity: sha512-yIM1xhYLs/Hs16BD7u3ypJQyqATZoOPl7BXum3hRepM4IdWE2X5POdGX1V9xl1Kmy7EywP0EGSydH632x3xXKg==}
+    dev: false
 
   /svelte-youtube-lite@0.5.1(svelte@4.2.9):
     resolution: {integrity: sha512-/GSp7M/esnxXx0ViaxDoZjccvm3xwe+Q+v7o3RaK6k6jX/mj8YwOCZKywJumgSDSXabY7prOjiEoPs1DeLpa4Q==}
