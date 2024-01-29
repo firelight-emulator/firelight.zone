@@ -25,7 +25,7 @@
 		<Form.Item>
 			<!-- TODO: display as url, like https://site/games/[game]/[slug] -->
 			<Form.Label>Slug</Form.Label>
-			<Form.Input autocapitalize="none" autocomplete="off" autocorrect="off" />
+			<Form.Slug mimic="name" />
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>

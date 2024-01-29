@@ -14,6 +14,7 @@ import NativeSelect from './form-native-select.svelte';
 import RadioGroup from './form-radio-group.svelte';
 import SelectTrigger from './form-select-trigger.svelte';
 import Select from './form-select.svelte';
+import Slug from './form-slug.svelte';
 import Switch from './form-switch.svelte';
 import Textarea from './form-textarea.svelte';
 import Validation from './form-validation.svelte';
@@ -58,6 +59,7 @@ export {
 	NativeSelect,
 	NativeRadio,
 	Game,
+	Slug,
 	//
 	Root as Form,
 	Field as FormField,
@@ -83,4 +85,5 @@ export {
 	SelectTrigger as FormSelectTrigger,
 	Button as FormButton,
 	Game as FormGame,
+	Slug as FormSlug,
 };
