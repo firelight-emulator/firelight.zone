@@ -174,29 +174,45 @@ export interface Database {
       hacks: {
         Row: {
           created_at: string
-          description: string
-          game_id: number
+          creator: string | null
+          game_id: number | null
           id: number
+          markdown_description: string
           name: string
+          public: boolean | null
           short_description: string
+          slug: string
         }
         Insert: {
           created_at?: string
-          description: string
-          game_id: number
+          creator?: string | null
+          game_id?: number | null
           id?: number
+          markdown_description?: string
           name: string
-          short_description: string
+          public?: boolean | null
+          short_description?: string
+          slug: string
         }
         Update: {
           created_at?: string
-          description?: string
-          game_id?: number
+          creator?: string | null
+          game_id?: number | null
           id?: number
+          markdown_description?: string
           name?: string
+          public?: boolean | null
           short_description?: string
+          slug?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "hacks_creator_fkey"
+            columns: ["creator"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
           {
             foreignKeyName: "hacks_game_id_fkey"
             columns: ["game_id"]

@@ -8,7 +8,6 @@
 <Form.Root method="POST" {form} schema={formSchema} let:config>
 	<Form.Field {config} name="game_name">
 		<Form.Item>
-			<!-- TODO: display as url, like https://site/games/[game]/[slug] -->
 			<Form.Label>Game</Form.Label>
 			<Form.Game />
 			<Form.Validation />

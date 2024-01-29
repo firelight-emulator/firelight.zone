@@ -1,13 +1,11 @@
 import { error } from '@sveltejs/kit';
 
-export async function load({ parent, locals: { supabase }, params }) {
-	const { game } = await parent();
-
+export async function load({ locals: { supabase }, params }) {
 	const { data: hack, error: queryError } = await supabase
 		.from('hacks')
 		.select()
-		.eq('game_id', game.id)
-		.eq('slug', params.hack);
+		.eq('slug', params.slug)
+		.single();
 
 	if (queryError) {
 		console.error(queryError);

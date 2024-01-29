@@ -10,12 +10,6 @@
 
 <Layout>
 	<Breadcrumbs slot="breadcrumbs">
-		<Breadcrumb up={2}>
-			{data.platform?.name}
-		</Breadcrumb>
-		<Breadcrumb up={1}>
-			{data.game?.game_name}
-		</Breadcrumb>
 		<Breadcrumb up={0}>
 			{data.hack.name}
 		</Breadcrumb>
@@ -29,7 +23,7 @@
 		<main class="grow">
 			<h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">{data.hack.name}</h1>
 
-			<Markdown source={data.hack.markdownDescription} />
+			<Markdown source={data.hack.markdown_description} />
 		</main>
 		<aside class="w-96 overflow-hidden">
 			<!--
