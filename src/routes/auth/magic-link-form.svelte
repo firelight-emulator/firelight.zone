@@ -21,6 +21,7 @@
 	{form}
 	schema={formSchema}
 	let:config
+	let:submitting
 	class="grid"
 	options={{
 		async onSubmit({ formData, cancel }) {
@@ -54,7 +55,7 @@
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>
-	<Form.Button>Send magic link</Form.Button>
+	<Form.SubmitButton {submitting}>Send magic link</Form.SubmitButton>
 </Form.Root>
 
 <AlertDialog.Root open={!!email}>

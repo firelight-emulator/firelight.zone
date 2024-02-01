@@ -15,6 +15,7 @@ import RadioGroup from './form-radio-group.svelte';
 import SelectTrigger from './form-select-trigger.svelte';
 import Select from './form-select.svelte';
 import Slug from './form-slug.svelte';
+import SubmitButton from './form-submit-button.svelte';
 import Switch from './form-switch.svelte';
 import Textarea from './form-textarea.svelte';
 import Validation from './form-validation.svelte';
@@ -60,6 +61,7 @@ export {
 	NativeRadio,
 	Game,
 	Slug,
+	SubmitButton,
 	//
 	Root as Form,
 	Field as FormField,
@@ -86,4 +88,5 @@ export {
 	Button as FormButton,
 	Game as FormGame,
 	Slug as FormSlug,
+	SubmitButton as FormSubmitButton,
 };

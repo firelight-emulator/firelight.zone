@@ -4,8 +4,16 @@
 	import Download from '$lib/components/patcher/download.svelte';
 	import Markdown from '$lib/components/markdown';
 	import YoutubeVideo from '$lib/components/youtube-video.svelte';
+	import { getSession } from '$lib/session.js';
+	import Button from '$lib/components/ui/button/button.svelte';
 
 	export let data;
+
+	const isCreator = data.hack.creator !== null && data.hack.creator === getSession()?.user.id;
+
+	function deleteHack() {
+		// TODO
+	}
 </script>
 
 <Layout>
@@ -24,6 +32,12 @@
 			<h1 class="py-3 text-4xl font-bold text-stone-900 dark:text-stone-100">{data.hack.name}</h1>
 
 			<Markdown source={data.hack.markdown_description} />
+
+			{#if isCreator}
+				<div class="rounded border border-red-500 p-3">
+					<Button on:click={deleteHack}>Delete</Button>
+				</div>
+			{/if}
 		</main>
 		<aside class="w-96 overflow-hidden">
 			<!--

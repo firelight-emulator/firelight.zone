@@ -5,7 +5,7 @@
 	export let form: SuperValidated<FormSchema>;
 </script>
 
-<Form.Root method="POST" {form} schema={formSchema} let:config>
+<Form.Root method="POST" {form} schema={formSchema} let:config let:submitting>
 	<Form.Field {config} name="game_name">
 		<Form.Item>
 			<Form.Label>Game</Form.Label>
@@ -28,5 +28,5 @@
 			<Form.Validation />
 		</Form.Item>
 	</Form.Field>
-	<Form.Button>Create</Form.Button>
+	<Form.SubmitButton {submitting}>Create</Form.SubmitButton>
 </Form.Root>
