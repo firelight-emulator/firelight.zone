@@ -2,13 +2,15 @@
 	import Layout from '$lib/components/layout.svelte';
 	import { Breadcrumbs, Breadcrumb } from '$lib/components/breadcrumbs';
 	import HackCard from '$lib/components/card/hack.svelte';
-	import type { PageData } from './$types';
 
-	export let data: PageData;
+	export let data;
 </script>
 
 <Layout>
 	<Breadcrumbs slot="breadcrumbs">
+		<Breadcrumb up={1}>
+			{data.platform.name}
+		</Breadcrumb>
 		<Breadcrumb up={0}>
 			{data.game.name}
 		</Breadcrumb>

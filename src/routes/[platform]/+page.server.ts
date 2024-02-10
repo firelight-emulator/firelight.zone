@@ -1,16 +1,5 @@
-import { error } from '@sveltejs/kit';
-
-export async function load({ locals: { supabase }, params }) {
-	const { data: platform, error: queryError } = await supabase
-		.from('platforms')
-		.select()
-		.eq('slug', params.platform)
-		.single();
-
-	if (queryError) {
-		console.error(queryError);
-		error(404);
-	}
+export async function load({ locals: { supabase }, parent }) {
+	const { platform } = await parent();
 
 	const { data: games, error: queryError2 } = await supabase
 		.from('games')
