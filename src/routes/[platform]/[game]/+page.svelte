@@ -25,7 +25,7 @@
 			<ol class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
 				{#each data.hacks as hack}
 					<li>
-						<a href={`/hacks/${hack.slug}`} class="w-full">
+						<a href={`/${data.platform.slug}/${data.game.slug}/${hack.slug}`} class="w-full">
 							<HackCard name={hack.name} description={hack.short_description} />
 						</a>
 					</li>

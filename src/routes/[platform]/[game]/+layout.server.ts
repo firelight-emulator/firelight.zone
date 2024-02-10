@@ -11,7 +11,7 @@ export async function load({ locals: { supabase }, params, parent }) {
 		.single();
 
 	if (queryError) {
-		console.error(queryError);
+		console.error('error querying game', queryError);
 		error(404);
 	}
 

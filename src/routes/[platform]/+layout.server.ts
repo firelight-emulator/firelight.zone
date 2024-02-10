@@ -8,7 +8,7 @@ export async function load({ locals: { supabase }, params }) {
 		.single();
 
 	if (queryError) {
-		console.error(queryError);
+		console.error('error querying platform', queryError);
 		error(404);
 	}
 

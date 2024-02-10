@@ -7,7 +7,7 @@ export async function load({ locals: { supabase }, parent }) {
 		.eq('game_id', game.id);
 
 	if (queryError) {
-		console.error(queryError);
+		console.error('error querying hacks', queryError);
 		return { game, hacks: [] };
 	}
 

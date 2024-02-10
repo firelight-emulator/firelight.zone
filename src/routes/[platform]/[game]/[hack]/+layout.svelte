@@ -13,6 +13,12 @@
 
 <Layout>
 	<Breadcrumbs slot="breadcrumbs">
+		<Breadcrumb up={2}>
+			{data.platform.name}
+		</Breadcrumb>
+		<Breadcrumb up={1}>
+			{data.game.name}
+		</Breadcrumb>
 		<Breadcrumb up={0}>
 			{data.hack.name}
 		</Breadcrumb>
